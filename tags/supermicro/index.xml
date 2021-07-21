@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>supermicro - Tag - 연구노트</title>
+        <link>https://defact0.github.io/tags/supermicro/</link>
+        <description>supermicro - Tag - 연구노트</description>
+        <generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>jdlee.geek@gmail.com (defact0)</managingEditor>
+            <webMaster>jdlee.geek@gmail.com (defact0)</webMaster><lastBuildDate>Mon, 05 Apr 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://defact0.github.io/tags/supermicro/" rel="self" type="application/rss+xml" /><item>
+    <title>슈퍼마이크로 서버</title>
+    <link>https://defact0.github.io/supermicro-server/</link>
+    <pubDate>Mon, 05 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/supermicro-server/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>어느 날 회사에 <code>2u서버</code>가 도착했다.<br>
+서버실 랙에 <code>2u서버</code>를 밀어 넣고 OS를 설치를 시도했다…</p>]]></description>
+</item></channel>
+</rss>

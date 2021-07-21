@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>virtualbox - Tag - 연구노트</title>
+        <link>https://defact0.github.io/tags/virtualbox/</link>
+        <description>virtualbox - Tag - 연구노트</description>
+        <generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>jdlee.geek@gmail.com (defact0)</managingEditor>
+            <webMaster>jdlee.geek@gmail.com (defact0)</webMaster><lastBuildDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://defact0.github.io/tags/virtualbox/" rel="self" type="application/rss+xml" /><item>
+    <title>버추얼박스(virtualbox)</title>
+    <link>https://defact0.github.io/virtualbox/</link>
+    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/virtualbox/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>PC에서 서버관련 테스트가 필요해 져서<br>
+사용중이던 docker desktop을 삭제하고 <code>virtualbox</code>를 설치하였다.</p>]]></description>
+</item></channel>
+</rss>

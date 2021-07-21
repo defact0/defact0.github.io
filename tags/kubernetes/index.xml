@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Kubernetes - Tag - 연구노트</title>
+        <link>https://defact0.github.io/tags/kubernetes/</link>
+        <description>Kubernetes - Tag - 연구노트</description>
+        <generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>jdlee.geek@gmail.com (defact0)</managingEditor>
+            <webMaster>jdlee.geek@gmail.com (defact0)</webMaster><lastBuildDate>Sun, 16 May 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://defact0.github.io/tags/kubernetes/" rel="self" type="application/rss+xml" /><item>
+    <title>Kubernetes(쿠버네티스)</title>
+    <link>https://defact0.github.io/kubernets/</link>
+    <pubDate>Sun, 16 May 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/kubernets/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>쿠버네티스에 대해 관심을 갖고 올해 CKA 자격 취득을 목표로 공부하고 있는 중이다.</p>]]></description>
+</item></channel>
+</rss>

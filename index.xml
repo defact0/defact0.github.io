@@ -1,0 +1,89 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>연구노트</title>
+        <link>https://defact0.github.io/</link>
+        <description>연구노트</description>
+        <generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>jdlee.geek@gmail.com (defact0)</managingEditor>
+            <webMaster>jdlee.geek@gmail.com (defact0)</webMaster><lastBuildDate>Sat, 17 Jul 2021 00:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://defact0.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>솔루션 회사 이야기</title>
+    <link>https://defact0.github.io/solution/</link>
+    <pubDate>Sat, 17 Jul 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/solution/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>솔루션 회사에서 근무하며 겪었던 솔루션 업무 관련 이야기이다.<br>
+기업용 End-Point 보안 솔루션 만들어 판매하는 회사에 입사하여<br>
+우연히 증권사에서 솔루션 고도화 프로젝트를 시작하게 되었다.</p>]]></description>
+</item><item>
+    <title>Kubernetes(쿠버네티스)</title>
+    <link>https://defact0.github.io/kubernets/</link>
+    <pubDate>Sun, 16 May 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/kubernets/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>쿠버네티스에 대해 관심을 갖고 올해 CKA 자격 취득을 목표로 공부하고 있는 중이다.</p>]]></description>
+</item><item>
+    <title>AWS Certified Cloud Practitioner 시험 후기</title>
+    <link>https://defact0.github.io/aws-certified-cloud-practitioner/</link>
+    <pubDate>Fri, 14 May 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/aws-certified-cloud-practitioner/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>4월 중순 부터 시작해서 5월 14일에 CLF-C01 시험에 합격을 하였다.</p>
+<p>원래는 SAA-C02 공부로 출발하였으나 먼저 시험을 치룬 지인이 너무 어렵다고 하여<br>
+고민을 하다 CLF-C01 시험준비로 노선을 변경하게 되었다.</p>]]></description>
+</item><item>
+    <title>앤서블(Ansible) 시작하기</title>
+    <link>https://defact0.github.io/ansible/</link>
+    <pubDate>Mon, 26 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/ansible/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p><strong>Ansible</strong>은 서버의 설정 및 관리, 소프트웨어 배포 등 다수의 서버에 대해 자동화를 구성하여 관리할 수 있는 도구입니다.</p>]]></description>
+</item><item>
+    <title>Server 관련 핸드북</title>
+    <link>https://defact0.github.io/server-book/</link>
+    <pubDate>Wed, 14 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/server-book/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>회사에서 자주 사용하고 있는 명령어들을 정리한 핸드북이다.<br>
+CentOS 7 을 메인으로 사용 중이다.</p>]]></description>
+</item><item>
+    <title>슈퍼마이크로 서버</title>
+    <link>https://defact0.github.io/supermicro-server/</link>
+    <pubDate>Mon, 05 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/supermicro-server/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>어느 날 회사에 <code>2u서버</code>가 도착했다.<br>
+서버실 랙에 <code>2u서버</code>를 밀어 넣고 OS를 설치를 시도했다…</p>]]></description>
+</item><item>
+    <title>Hugo기반의 Gitblog만들기</title>
+    <link>https://defact0.github.io/gitblog-hugo/</link>
+    <pubDate>Sun, 04 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/gitblog-hugo/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>기존에 <code>Hexo</code> 기반의 <code>Theme NexT</code>테마를 쓰고 있었으나, 애니메이션 효과 때문인지 전반적으로 웹 페이지 반응이 느린거 같아 다른 테마를 찾아 사용하려고 한다.</p>]]></description>
+</item><item>
+    <title>버추얼박스(virtualbox)</title>
+    <link>https://defact0.github.io/virtualbox/</link>
+    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/virtualbox/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p>PC에서 서버관련 테스트가 필요해 져서<br>
+사용중이던 docker desktop을 삭제하고 <code>virtualbox</code>를 설치하였다.</p>]]></description>
+</item></channel>
+</rss>

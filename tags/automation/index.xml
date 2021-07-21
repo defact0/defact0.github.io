@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>automation - Tag - 연구노트</title>
+        <link>https://defact0.github.io/tags/automation/</link>
+        <description>automation - Tag - 연구노트</description>
+        <generator>Hugo -- gohugo.io</generator><language>ko</language><managingEditor>jdlee.geek@gmail.com (defact0)</managingEditor>
+            <webMaster>jdlee.geek@gmail.com (defact0)</webMaster><lastBuildDate>Mon, 26 Apr 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://defact0.github.io/tags/automation/" rel="self" type="application/rss+xml" /><item>
+    <title>앤서블(Ansible) 시작하기</title>
+    <link>https://defact0.github.io/ansible/</link>
+    <pubDate>Mon, 26 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://defact0.github.io/ansible/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/thumnail.png" referrerpolicy="no-referrer">
+            </div><p><strong>Ansible</strong>은 서버의 설정 및 관리, 소프트웨어 배포 등 다수의 서버에 대해 자동화를 구성하여 관리할 수 있는 도구입니다.</p>]]></description>
+</item></channel>
+</rss>

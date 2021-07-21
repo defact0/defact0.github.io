@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Kubernetes(쿠버네티스) - 연구노트</title><meta name="Description" content=""><meta property="og:title" content="Kubernetes(쿠버네티스)" />
+<meta property="og:description" content="쿠버네티스에 대해 관심을 갖고 올해 CKA 자격 취득을 목표로 공부하고 있는 중이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://defact0.github.io/kubernets/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-05-16T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-05-16T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kubernetes(쿠버네티스)"/>
+<meta name="twitter:description" content="쿠버네티스에 대해 관심을 갖고 올해 CKA 자격 취득을 목표로 공부하고 있는 중이다."/>
+<meta name="application-name" content="연구노트">
+<meta name="apple-mobile-web-app-title" content="연구노트"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://defact0.github.io/kubernets/" /><link rel="prev" href="https://defact0.github.io/aws-certified-cloud-practitioner/" /><link rel="next" href="https://defact0.github.io/solution/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Kubernetes(쿠버네티스)",
+        "inLanguage": "ko",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/defact0.github.io\/kubernets\/"
+        },"genre": "posts","keywords": "Kubernetes","wordcount":  472 ,
+        "url": "https:\/\/defact0.github.io\/kubernets\/","datePublished": "2021-05-16T00:00:00+00:00","dateModified": "2021-05-16T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "defact0"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="연구노트">📚 연구노트</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="연구노트">📚 연구노트</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Kubernetes(쿠버네티스)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>defact0</a></span>&nbsp;<span class="post-category">included in <a href="/categories/server/"><i class="far fa-folder fa-fw"></i>Server</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-16">2021-05-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;472 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="thumnail.png"
+        data-srcset="/kubernets/thumnail.png, thumnail.png 1.5x, /kubernets/thumnail.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/thumnail.png"
+        title="/kubernets/thumnail.png" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#쿠버네티스-소개">쿠버네티스 소개</a>
+      <ul>
+        <li><a href="#쿠버네티스-장점">쿠버네티스 장점</a></li>
+        <li><a href="#클러스터-아키텍쳐">클러스터 아키텍쳐</a></li>
+      </ul>
+    </li>
+    <li><a href="#쿠버네티스-실습">쿠버네티스 실습</a>
+      <ul>
+        <li><a href="#play-with-kubernetes">play with kubernetes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>쿠버네티스에 대해 관심을 갖고 올해 CKA 자격 취득을 목표로 공부하고 있는 중이다.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="br.png"
+        data-srcset="/kubernets/br.png, br.png 1.5x, /kubernets/br.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/br.png"
+        title="br" /></p>
+<h2 id="쿠버네티스-소개">쿠버네티스 소개</h2>
+<ul>
+<li>구글에서 보그(Borg)라는 내부 시스템으로 개발하다 쿠버네티스라는 이름으로 오픈소스 공개</li>
+<li>조직 규모가 클 때 엄청난 가치를 발휘</li>
+<li>인프라의 추상화 = 개발/배포/관리를 단순화</li>
+<li>모든 노드를 하나의 거대한 컴퓨터 처럼 실행</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="br.png"
+        data-srcset="/kubernets/br.png, br.png 1.5x, /kubernets/br.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/br.png"
+        title="br" /></p>
+<h3 id="쿠버네티스-장점">쿠버네티스 장점</h3>
+<ul>
+<li>애플리케이선 배포 단순화</li>
+<li>하드웨어 활용도 극대화</li>
+<li>상태확인 및 자가진단</li>
+<li>오토스케일링</li>
+<li>애플리케이션 개발 단순화</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="br.png"
+        data-srcset="/kubernets/br.png, br.png 1.5x, /kubernets/br.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/br.png"
+        title="br" /></p>
+<h3 id="클러스터-아키텍쳐">클러스터 아키텍쳐</h3>
+<figure>
+    <img src="pic01.png"/> <figcaption>
+            <h4>마스터 노드와 워커 노드</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>마스터 노드
+<ul>
+<li>관리, 통제</li>
+</ul>
+</li>
+<li>워커 노드
+<ul>
+<li>배포되는 애플리케이션 실행</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="br.png"
+        data-srcset="/kubernets/br.png, br.png 1.5x, /kubernets/br.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/br.png"
+        title="br" /></p>
+<figure>
+    <img src="pic02.png"/> <figcaption>
+            <h4>클러스터 아키텍처</h4>
+        </figcaption>
+</figure>
+
+<p><strong>컨트롤 플레인</strong></p>
+<ul>
+<li>클러스터를 관리</li>
+<li>고가용성 보장</li>
+<li>애플리케이션은 실행하지 않음</li>
+<li>구성요소
+<ul>
+<li>쿠버네티스 AIP 서버
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">사용자, 컨트롤 플레인과 통신</div>
+        </div>
+    </div></li>
+<li>스케쥴러
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">배포 가능한 각 구성요소에 워커노드 할당</div>
+        </div>
+    </div></li>
+<li>컨트롤 매니저
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">구성요소 복제, 워커노드 추적, 노드 장애처리</div>
+        </div>
+    </div></li>
+<li>데이터 스토리지
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">etcd는 구성을 지속적으로 저장</div>
+        </div>
+    </div></li>
+</ul>
+</li>
+</ul>
+<p><strong>노드</strong></p>
+<ul>
+<li>애플리케이션 실행</li>
+<li>구성요소
+<ul>
+<li>컨테이너 런타임
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">컨테이너를 실행하는 도커</div>
+        </div>
+    </div></li>
+<li>Kubelet
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">API 서버와 통신하고 노드에서 컨테이너를 관리</div>
+        </div>
+    </div></li>
+<li>쿠버네티스 서비스(kubernetes service), 프록시(kube-proxy)
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">애플리케이션 간에 네트워크 트래픽을 분산, 연결</div>
+        </div>
+    </div></li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="br.png"
+        data-srcset="/kubernets/br.png, br.png 1.5x, /kubernets/br.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/br.png"
+        title="br" /></p>
+<h2 id="쿠버네티스-실습">쿠버네티스 실습</h2>
+<ul>
+<li>카타코다 쿠버네티스 플레이 그라운드
+<ul>
+<li><a href="https://www.katacoda.com/courses/kubernetes/playground">https://www.katacoda.com/courses/kubernetes/playground</a></li>
+<li>1시간 동안 쓸 수 있고, 예제가 많다.</li>
+</ul>
+</li>
+<li>play with kubernetes
+<ul>
+<li><a href="https://labs.play-with-k8s.com">https://labs.play-with-k8s.com</a></li>
+<li>4시간 동안 쓸 수 있고, 직접 구성해야 한다.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="br.png"
+        data-srcset="/kubernets/br.png, br.png 1.5x, /kubernets/br.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/br.png"
+        title="br" /></p>
+<h3 id="play-with-kubernetes">play with kubernetes</h3>
+<p>로그인은 github 계정 또는 docker 계정이 필요하다.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="br.png"
+        data-srcset="/kubernets/br.png, br.png 1.5x, /kubernets/br.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/br.png"
+        title="br" /></p>
+<ol>
+<li>
+<p>[ADD NEW INSTANCE ]버튼을 클릭한다.</p>
+</li>
+<li>
+<p>Node1 인스턴스가 생성되며, 아래와 같은 화면이 출력 된다.</p>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>Info<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>WARNING!!!!</p>
+<p>This is a sandbox environment. Using personal credentials
+is HIGHLY! discouraged. Any consequences of doing so, are
+completely the user&rsquo;s responsibilites.</p>
+<p>You can bootstrap a cluster as follows:</p>
+<ol>
+<li>Initializes cluster master node:</li>
+</ol>
+<p>kubeadm init &ndash;apiserver-advertise-address $(hostname -i) &ndash;pod-network-cidr 10.5.0.0/16</p>
+<ol start="2">
+<li>Initialize cluster networking:</li>
+</ol>
+<p>kubectl apply -f <a href="https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml">https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml</a></p>
+<ol start="3">
+<li>(Optional) Create an nginx deployment:</li>
+</ol>
+<p>kubectl apply -f <a href="https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/nginx-app.yaml">https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/nginx-app.yaml</a></p>
+<p>The PWK team.</p>
+<p>[node1 ~]$</p>
+</div>
+        </div>
+    </div>
+</li>
+<li>
+<p>node1 터미널에 kubeadm init 명령어를 입력하여 master 서버로 만든다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">kubeadm init --apiserver-advertise-address <span class="k">$(</span>hostname -i<span class="k">)</span> --pod-network-cidr 10.5.0.0/16
+</code></pre></div></li>
+<li>
+<p>master 서버 생성이 끝나면 아래와 같은 내용이 출력 되는데,
+<code>kubeadm join</code> (워커노드 join) 부분은 따로 복사하여 저장해 두자.</p>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>Info<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>WARNING!!!!</p>
+<p>This is a sandbox environment. Using personal credentials
+is HIGHLY! discouraged. Any consequences of doing so, are
+completely the user&rsquo;s responsibilites.</p>
+<p>You can bootstrap a cluster as follows:</p>
+<ol>
+<li>Initializes cluster master node:</li>
+</ol>
+<p>kubeadm init &ndash;apiserver-advertise-address $(hostname -i) &ndash;pod-network-cidr 10.5.0.0/16</p>
+<ol start="2">
+<li>Initialize cluster networking:</li>
+</ol>
+<p>kubectl apply -f <a href="https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml">https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml</a></p>
+<ol start="3">
+<li>(Optional) Create an nginx deployment:</li>
+</ol>
+<p>kubectl apply -f <a href="https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/nginx-app.yaml">https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/nginx-app.yaml</a></p>
+<p>The PWK team.</p>
+<p>[node1 ~]$</p>
+</div>
+        </div>
+    </div>
+</li>
+<li>
+<p>그 다음 CNI kube-router 구성을 해야 한다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">kubectl apply -f https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml
+</code></pre></div></li>
+<li>
+<p>워커 노드를 만들기 위해서는 [ADD NEW INSTANCE ]버튼을 클릭한다.</p>
+</li>
+<li>
+<p>node2 인스턴스가 만들어 지면 아래 명령어를 입력하여 master 서버와 연결을 한다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">kubeadm join 192.168.0.33:6443 --token wxoizr.vo38zscn9e185wt6 <span class="se">\
+</span><span class="se"></span>    --discovery-token-ca-cert-hash sha256:b39d6171a8537d90b638780ccab260797f0f9506ac326a63e11366e1be0c615f
+</code></pre></div></li>
+<li>
+<p>node1 인스턴스로 돌아가 아래 명령어를 입력한다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">kubectl get nodes -o wide
+</code></pre></div><p>아래와 같은 결과가 출력된다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>node1 ~<span class="o">]</span>$ kubectl get nodes -o wide
+NAME    STATUS   ROLES                  AGE     VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION      CONTAINER-RUNTIME
+node1   Ready    control-plane,master   15m     v1.20.1   192.168.0.33   &lt;none&gt;        CentOS Linux <span class="m">7</span> <span class="o">(</span>Core<span class="o">)</span>   4.4.0-197-generic   docker://20.10.1
+node2   Ready    &lt;none&gt;                 8m46s   v1.20.1   192.168.0.32   &lt;none&gt;        CentOS Linux <span class="m">7</span> <span class="o">(</span>Core<span class="o">)</span>   4.4.0-197-generic   docker://20.10.1
+<span class="o">[</span>node1 ~<span class="o">]</span>$
+</code></pre></div></li>
+</ol>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="br.png"
+        data-srcset="/kubernets/br.png, br.png 1.5x, /kubernets/br.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/br.png"
+        title="br" /></p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
+<li>복사 = Ctrl + Insert</li>
+<li>붙여넣기 = Shift + Insert</li>
+<li>화면 클리어 = Ctrl + L</li>
+</ul>
+</div>
+        </div>
+    </div>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="br.png"
+        data-srcset="/kubernets/br.png, br.png 1.5x, /kubernets/br.png 2x"
+        data-sizes="auto"
+        alt="/kubernets/br.png"
+        title="br" /></p>
+<blockquote>
+<p>계속 업데이트 될 예정</p>
+</blockquote></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-05-16</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/kubernets/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://defact0.github.io/kubernets/" data-title="Kubernetes(쿠버네티스)" data-hashtags="Kubernetes"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://defact0.github.io/kubernets/" data-hashtag="Kubernetes"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://defact0.github.io/kubernets/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://defact0.github.io/kubernets/" data-title="Kubernetes(쿠버네티스)"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://defact0.github.io/kubernets/" data-title="Kubernetes(쿠버네티스)" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://defact0.github.io/kubernets/" data-title="Kubernetes(쿠버네티스)"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/kubernetes/">Kubernetes</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/aws-certified-cloud-practitioner/" class="prev" rel="prev" title="AWS Certified Cloud Practitioner 시험 후기"><i class="fas fa-angle-left fa-fw"></i>AWS Certified Cloud Practitioner 시험 후기</a>
+            <a href="/solution/" class="next" rel="next" title="솔루션 회사 이야기">솔루션 회사 이야기<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">defact0</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://defact0-github-io.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-163730865-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-163730865-1" async></script></body>
+</html>
