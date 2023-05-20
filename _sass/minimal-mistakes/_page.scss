@@ -55,7 +55,12 @@ body {
     width: 100%;
     clear: both;
 
-    .page__content,
+    .page__content{
+      /* paragraph indents */
+      p {
+        line-height: 1.5; // 가독성을 위해 줄 간격 추가
+      }
+    }
     .page__meta,
     .page__share {
       position: relative;
@@ -131,7 +136,7 @@ body {
 
   a:not(.btn) {
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
 
       img {
         box-shadow: 0 0 10px rgba(#000, 0.25);
