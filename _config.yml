@@ -15,7 +15,7 @@ theme                  : "minimal-mistakes-jekyll"
 minimal_mistakes_skin    :  # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "en-US" # "ko-KR" 
 title                    : "There is so much to know!"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
@@ -63,7 +63,7 @@ search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : lunr # lunr (default), algolia, google
 lunr:
-  search_within_pages    : true # true, false (default)
+  search_within_pages    : false # true, false (default)
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -108,7 +108,7 @@ author:
   name             : "Jeongdo"
   avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "The beginning of the cloud native journey"
-  location         : "Incheon, Republic of Korea"
+  location         : "Republic of Korea"
   email            :
   links:
     - label: "Email"
@@ -288,7 +288,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true # false
-      # show_date: true
+      show_date: true
       comments: # true
       share: true
       related: true
