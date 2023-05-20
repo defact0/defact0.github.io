@@ -1,0 +1,37 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+
+.nanumgothiccoding * {
+ font-family: 'Nanum Gothic Coding', monospace;
+}
+
+// # Reference
+// - https://github.com/mmistakes/minimal-mistakes/discussions/1352
+// - https://noonnu.cc/font_page/40
+// - https://amsomad.github.io/%EC%9C%A0%ED%8B%B8%EB%A6%AC%ED%8B%B0/Minimal_Mistakes_font_update/
+@import "minimal-mistakes";
+
+html {
+    font-size: 14px; // change to whatever
+  
+    @include breakpoint($medium) {
+      font-size: 16px; // change to whatever
+    }
+  
+    @include breakpoint($large) {
+      font-size: 18px; // change to whatever
+    }
+  
+    @include breakpoint($x-large) {
+      font-size: 20px; // change to whatever
+    }
+  }
