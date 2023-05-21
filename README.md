@@ -39,6 +39,8 @@ classes: wide   # 추가
 ### 폰트사이즈 수정
 - `_sass/minimal-mistakes/_reset.scss`
 
+### 색상 수정
+- `_sass\minimal-mistakes\skins\_default.scss`
 
 # Reference
 - https://github.com/mmistakes/minimal-mistakes/discussions/1352

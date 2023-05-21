@@ -8,9 +8,11 @@
 $gray                       : #0a0a0a !default;
 $dark-gray                  : mix(#000, $gray, 40%) !default;
 $darker-gray                : mix(#000, $gray, 60%) !default;
-$text-color                 : $dark-gray !default;
+$text-color                 : #000 !default;
 $primary-color              : $dark-gray !default;
 $info-color                 : #070707 !default;
+$background-color           : #ffffff !default;
+$code-background-color      : mix(#000, $background-color, 15%) !default;
 
 /* links */
 $link-color                 : $info-color !default;

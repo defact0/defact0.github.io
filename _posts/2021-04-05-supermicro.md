@@ -4,7 +4,6 @@ date: 2021-04-05
 categories:
   - Server
 tags:
-  - Supermicro
   - RAID
 ---
 
