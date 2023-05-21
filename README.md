@@ -19,6 +19,9 @@ gem install tocbot
 # 로컬에서 실행
 bundle install
 jekyll serve
+
+# 파일 삭제이후 실행
+git clean -d -f
 ```
 
 ### 메인페이지 수정
@@ -38,6 +41,9 @@ classes: wide   # 추가
 
 ### 폰트사이즈 수정
 - `_sass/minimal-mistakes/_reset.scss`
+
+### Github.io 게시글 밑줄 제거, 본문 글자 크기 수정
+- ` _sass/minimal-mistakes/로 이동하여, _base.scss` 
 
 ### 색상 수정
 - `_sass\minimal-mistakes\skins\_default.scss`

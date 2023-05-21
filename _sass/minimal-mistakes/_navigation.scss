@@ -132,6 +132,11 @@
     border: 1px solid mix(#000, $border-color, 25%);
     border-radius: $border-radius;
 
+    &:visited {
+      /* [add] jdlee 2023-05-21 */
+      color: $text-color; 
+    }
+
     &:hover {
       @include yiq-contrasted($muted-text-color);
     }

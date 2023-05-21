@@ -127,12 +127,15 @@ blockquote {
 
 a {
   text-decoration: none;
+  color: $link-my-color;
+
   &:focus {
     @extend %tab-focus;
   }
 
   &:visited {
-    color: $link-color-visited;
+    /* [add] jdlee 2023-05-21 */
+    color: $link-my-color; 
   }
 
   &:hover {
