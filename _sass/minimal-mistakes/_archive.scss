@@ -28,6 +28,8 @@
 
   a[rel="permalink"] {
     position: static;
+    /* [add] jdlee 2023-05-21 */
+    color: $text-color;
   }
 }
 
