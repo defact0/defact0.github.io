@@ -37,7 +37,10 @@ layout: default
         </header>
       {% endunless %}
 
-      <section class="page__content e-content" itemprop="text">
+	 <!-- [FIX] jdlee 2023-05-22
+	    <section class="page__content e-content" itemprop="text">
+	 -->
+      <section class="page__content e-content" itemprop="text" style="margin-top: 40px;">
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc">
