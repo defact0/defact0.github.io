@@ -5,6 +5,10 @@ categories:
   - Server
 tags:
   - RAID
+tagline: "Super Micro Computer는 캘리포니아 산호세에 본사를 둔 정보 기술 회사입니다. 네덜란드의 실리콘 밸리와 대만의 과학 기술 공원에서 제조 작업을 하고 있습니다."
+header:
+  overlay_image: /images/overlay_image.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black 
 ---
 
 어느 날 회사에 `2u서버`가 도착했다.  

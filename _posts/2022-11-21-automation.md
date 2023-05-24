@@ -6,6 +6,10 @@ categories:
   - Cloud
 tags:
   - Automation
+tagline: "인프라 자동화에 대해 운영체제에서의 자동화와 클라우드 환경에서 각각 어떻게 구현했었는지에 대한 이야기 합니다."
+header:
+  overlay_image: /images/overlay_image.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black 
 ---
 
 
