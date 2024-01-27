@@ -9,8 +9,12 @@ search: false
 @import "minimal-mistakes"; // main partials
 
 @font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    // font-family: 'NanumSquareNeo-Variable';
+    // src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    // font-family: 'D2Coding-ligature';
+    // src: url('https://cdn.jsdelivr.net/gh/everydayminder/assets/subset-D2Codingligature.woff2') format('woff2');
+    font-family: 'Nanum Gothic Coding';
+    src: url('http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css');
     font-weight: normal;
     font-style: normal;
 }

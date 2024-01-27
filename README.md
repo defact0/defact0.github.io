@@ -20,6 +20,10 @@ gem install tocbot
 bundle install
 jekyll serve
 
+# 초안 작성 포스트 같이 보기
+# --draft 폴더안에 내용 추가로 보여짐
+jekyll serve --draft 
+
 # 파일 삭제이후 실행
 git clean -d -f
 ```
